@@ -10,7 +10,7 @@ export function useFetch(url, options = {}) {
     setIsLoading(true);
     setIsError(false);
 
-    const controller = new AbortController();
+    const controller = new AbortController(); // We create a new AbortController to abort the fetch if the component is unmounted. This way if we click one radio button than another, the original data does not persist.
 
     fetch(url, { signal: controller.signal, ...options })
       .then((res) => {
