@@ -21,7 +21,7 @@ const URLS = {
 //   headers: {
 //     "Content-type": "application/json",
 //   },
-// }
+// };
 
 function App() {
   const [url, setUrl] = useState(URLS.USERS);
@@ -29,7 +29,7 @@ function App() {
   const { data, isLoading, isError } = useFetch(url);
 
   // BONUS:
-  // const { data, isLoading, isError } = useFetch(url, OPTIONS)
+  // const { data, isLoading, isError } = useFetch(url, OPTIONS);
 
   return (
     <>
